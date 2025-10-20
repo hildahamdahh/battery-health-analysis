@@ -2,13 +2,13 @@
 
 **Optimizing Charging Cycles Through Data Analysis**
 
-This project explores how charging cycles and depth of discharge affect battery health (State of Health / SoH) using two battery types: LFP and NMC.
+This project explores how charging cycles and depth of discharge affect battery health (State of Health / SoH) using two battery types: LFP and NMC.  
 It combines data analysis, visualization, and a simple predictive RNN model to generate actionable insights for optimizing battery lifespan.
 
-📊 **Project Overview**
-Objective:
-Analyze large-scale battery data to identify how charging habits and usage patterns impact battery degradation, and provide recommendations to extend battery life.
-Battery Types:
+📊 **Project Overview**  
+Objective:  
+Analyze large-scale battery data to identify how charging habits and usage patterns impact battery degradation, and provide recommendations to extend battery life.  
+Battery Types:  
 - LFP (Lithium Iron Phosphate)
 - NMC (Nickel Manganese Cobalt)
 Dataset Size: ~1.5 million rows → cleaned to ~420k usable rows.
