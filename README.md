@@ -39,14 +39,13 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import SimpleRNN, Dense  
 
 model = Sequential([  
-    SimpleRNN(64, input_shape=(X_train.shape[1], X_train.shape[2]), activation='relu'),
-    Dense(1, activation='linear')
-])
-model.compile(optimizer='adam', loss='mse', metrics=['mae'])
-history = model.fit(X_train, y_train, validation_data=(X_val, y_val),
-                    epochs=30, batch_size=32)
-Results:
-RNN achieved lowest error (MAE ≈ 0.7%, MAPE ≈ 2.3%).
+      SimpleRNN(64, input_shape=(X_train.shape[1], X_train.shape[2]), activation='relu'),  
+      Dense(1, activation='linear')])  
+model.compile(optimizer='adam', loss='mse', metrics=['mae'])  
+history = model.fit(X_train, y_train, validation_data=(X_val, y_val),epochs=30, batch_size=32)  
+
+Results:  
+RNN achieved lowest error (MAE ≈ 0.7%, MAPE ≈ 2.3%).  
 Confirms strong influence of Depth of Discharge and Capacity on SoH degradation.
 
 💡 Recommendations
