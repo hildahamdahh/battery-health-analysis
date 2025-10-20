@@ -13,22 +13,22 @@ Battery Types:
 - NMC (Nickel Manganese Cobalt)
 Dataset Size: ~1.5 million rows → cleaned to ~420k usable rows.
 
-🧹 Data Cleaning Example
-Filtering unrealistic voltage and current values:
-df_clean = df[(df['Voltage'] >= 2500) & (df['Voltage'] <= 4200)]
-df_clean = df_clean[(df['Current'] >= 0.1) & (df['Current'] <= 1000)]
+🧹 **Data Cleaning Example  **
+Filtering unrealistic voltage and current values:  
+df_clean = df[(df['Voltage'] >= 2500) & (df['Voltage'] <= 4200)]  
+df_clean = df_clean[(df['Current'] >= 0.1) & (df['Current'] <= 1000)]  
 print("Cleaned dataset:", df_clean.shape)
 
-🔍 Exploratory Data Analysis
-Trend: SoH consistently decreases with higher cycle count → natural degradation.
-Correlation:
-Capacity ↔ SoH = +1.0
-DoD ↔ SoH = -1.0
-Voltage ↔ SoH = -0.96
-Distribution: Most batteries maintain >95% SoH, but deep discharges accelerate drop.
-Key Findings:
-Optimal charging range: 20–80% SoC
-Ideal daily cycles: 1–2 cycles/day
+🔍 **Exploratory Data Analysis**  
+- Trend: SoH consistently decreases with higher cycle count → natural degradation.  
+- Correlation:  
+Capacity ↔ SoH = +1.0  
+DoD ↔ SoH = -1.0  
+Voltage ↔ SoH = -0.96  
+Distribution: Most batteries maintain >95% SoH, but deep discharges accelerate drop.  
+- Key Findings:  
+Optimal charging range: 20–80% SoC  
+Ideal daily cycles: 1–2 cycles/day  
 Deep discharge (>80% DoD) significantly accelerates degradation.
 
 🧠 RNN Modeling
