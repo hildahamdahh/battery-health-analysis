@@ -1,5 +1,6 @@
-🔋 Battery Health Analysis (LFP + NMC)
-Optimizing Charging Cycles Through Data Analysis
+🔋 **Battery Health Analysis (LFP + NMC)**
+**Optimizing Charging Cycles Through Data Analysis**
+
 This project explores how charging cycles and depth of discharge affect battery health (State of Health / SoH) using two battery types: LFP and NMC.
 It combines data analysis, visualization, and a simple predictive RNN model to generate actionable insights for optimizing battery lifespan.
 
