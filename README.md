@@ -10,10 +10,10 @@ Objective:
 Analyze large-scale battery data to identify how charging habits and usage patterns impact battery degradation, and provide recommendations to extend battery life.  
 Battery Types:  
 - LFP (Lithium Iron Phosphate)
-- NMC (Nickel Manganese Cobalt)
+- NMC (Nickel Manganese Cobalt)  
 Dataset Size: ~1.5 million rows → cleaned to ~420k usable rows.
 
-🧹 **Data Cleaning Example  **
+🧹 **Data Cleaning Example**
 Filtering unrealistic voltage and current values:  
 df_clean = df[(df['Voltage'] >= 2500) & (df['Voltage'] <= 4200)]  
 df_clean = df_clean[(df['Current'] >= 0.1) & (df['Current'] <= 1000)]  
