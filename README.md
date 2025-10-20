@@ -8,12 +8,13 @@ It combines data analysis, visualization, and a simple predictive RNN model to g
 📊 **Project Overview**  
 Objective:  
 Analyze large-scale battery data to identify how charging habits and usage patterns impact battery degradation, and provide recommendations to extend battery life.  
+Dataset Size: ~1.5 million rows → cleaned to ~420k usable rows.  
 Battery Types:  
 - LFP (Lithium Iron Phosphate)
 - NMC (Nickel Manganese Cobalt)  
-Dataset Size: ~1.5 million rows → cleaned to ~420k usable rows.
 
-🧹 **Data Cleaning Example**
+
+🧹 **Data Cleaning Example**  
 Filtering unrealistic voltage and current values:  
 df_clean = df[(df['Voltage'] >= 2500) & (df['Voltage'] <= 4200)]  
 df_clean = df_clean[(df['Current'] >= 0.1) & (df['Current'] <= 1000)]  
@@ -31,13 +32,13 @@ Optimal charging range: 20–80% SoC
 Ideal daily cycles: 1–2 cycles/day  
 Deep discharge (>80% DoD) significantly accelerates degradation.
 
-🧠 RNN Modeling
-A simple Recurrent Neural Network (RNN) was trained to predict SoH trends based on historical sensor data.
-This model validates the same behavioral patterns observed in EDA.
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import SimpleRNN, Dense
+🧠 **RNN Modeling**  
+A simple Recurrent Neural Network (RNN) was trained to predict SoH trends based on historical sensor data.  
+This model validates the same behavioral patterns observed in EDA.  
+from tensorflow.keras.models import Sequential  
+from tensorflow.keras.layers import SimpleRNN, Dense  
 
-model = Sequential([
+model = Sequential([  
     SimpleRNN(64, input_shape=(X_train.shape[1], X_train.shape[2]), activation='relu'),
     Dense(1, activation='linear')
 ])
